@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Content Listing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **responsive and performant** content listing page built with **ReactJS**. The project demonstrates best practices in modern front-end development, fulfilling all design and functional requirements provided in the **React Workshop Assignment**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Lazy Loading**
+  Loads data and images seamlessly as the user scrolls.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Client-Side Search**
+  Instantly filters movies based on user input, without API calls.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Responsive Grid Layout**
 
-### `npm test`
+  - Portrait view: 3 columns
+  - Landscape view: 5 columns
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Keyboard Navigation**
+  Users can navigate through the grid using arrow keys.
 
-### `npm run build`
+- **Smooth UI Effects**
+  Includes a subtle scale effect on hover and focus.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Edge Case Handling**
+  Handles missing images and titles without breaking the UI.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Pixel-Perfect UI**
+  Matches the given design specification closely.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```plaintext
+src/
+├── components/
+│   ├── ContentGrid.jsx       # Main logic and state management
+│   ├── Header.jsx            # Search bar, back button, and suggestions
+│   └── MovieGrid.jsx         # Displays the grid of movie posters
+├── utils/
+│   └── constants.js          # Base API URL and configuration
+├── index.css                 # Global styles, custom font, scrollbars
+├── index.js                  # App entry point
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+public/
+└── index.html                # Loads Titillium Web font
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech Stack
 
-## Learn More
+- React 18
+- Tailwind CSS v3
+- Axios for data fetching
+- IntersectionObserver API for infinite scrolling
+- Modern JavaScript (ES6+), HTML5, CSS3
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Getting Started
 
-### Code Splitting
+### 1. Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+### 2. Run the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+The app will run locally at: [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## API & Assets Reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Base URL**: `https://test.create.diagnal.com`
 
-### Deployment
+- **Data API**:
+  `/data/page#.json`
+  _(e.g., `/data/page1.json`, `/data/page2.json`)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Image Assets**:
+  `/images/`
+  _(e.g., `/images/poster1.jpg`, `/images/Back.png`, `/images/search.png`)_
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Requirements Covered
+
+- Pixel-perfect UI design
+- Infinite scroll with lazy loading
+- Client-side search
+- Responsive layout (portrait & landscape)
+- No visible scrollbars
+- Keyboard accessibility
+- Error fallback handling for broken images
+- Clean, modular and well-commented code
